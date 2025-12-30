@@ -238,9 +238,12 @@ span {
     margin: 1rem 0 3rem;
 }
 
+/* FIX: Centering Projects using Flexbox instead of Grid */
 .portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex; /* Changed from Grid to Flex */
+    justify-content: center; /* Centers items horizontally */
+    flex-wrap: wrap; /* Wraps items if screen is small */
+    gap: 2rem;
 }
 
 .portfolio-box {
@@ -248,10 +251,15 @@ span {
     overflow: hidden;
     position: relative;
     display: flex;
+    /* Limit width so they don't stretch too wide in flex */
+    max-width: 40rem; 
+    width: 100%;
 }
 
 .portfolio-box img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: .5s ease;
 }
 
@@ -425,7 +433,6 @@ span {
     .home-content h3 { font-size: 2.6rem; }
     .home-content h1 { font-size: 5rem; }
     
-    /* FIX: Ensure both images are identical size on mobile */
     .home-img img, 
     .about-img img { 
         width: 70vw; 
@@ -434,11 +441,8 @@ span {
     
     .about { flex-direction: column-reverse; }
 
-    .portfolio-container { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 617px) {
-    .portfolio-container { grid-template-columns: 1fr; }
+    /* Centering works automatically with flex, just ensure full width */
+    .portfolio-container { width: 100%; }
 }
 
 @media (max-width: 450px) {
