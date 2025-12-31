@@ -1,10 +1,10 @@
 /*======================= toggle icon navbar =======================*/
-let menuIcon = document.querySelector('#menu-icon'); // Fixed: querySelector (singular)
+let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
 menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x'); // Changes the hamburger icon to an 'X'
-    navbar.classList.toggle('active'); // Shows/hides the menu
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
 };
 
 /*======================= scroll sections active link =======================*/
@@ -33,8 +33,7 @@ window.onscroll = () => {
     let header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 100);
 
-    /*======================= remove toggle icon and navbar when click navbar link (scroll) =======================*/
-    // This ensures the menu closes automatically when you click a link on mobile
+    /*======================= remove toggle icon and navbar when click navbar link =======================*/
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
@@ -54,7 +53,8 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 /*======================= typed js =======================*/
 const typed = new Typed('.multiple-text', {
-    strings: ['Software Engineer', 'Data Analyst', 'Full Stack Developer', 'AI/ML Enthusiast'],
+    /* UPDATED: Added Freelancer & AI Specialist to the list */
+    strings: ['Software Engineer', 'AI Specialist', 'Full Stack Developer', 'Freelancer'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
