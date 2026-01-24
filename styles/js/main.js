@@ -53,8 +53,8 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 /*======================= typed js =======================*/
 const typed = new Typed('.multiple-text', {
-    /* UPDATED: Added Freelancer & AI Specialist to the list */
-    strings: ['Software Engineer', 'AI Specialist', 'Full Stack Developer', 'Freelancer'],
+    /* REMOVED: Freelancer */
+    strings: ['Software Engineer', 'AI Specialist', 'Full Stack Developer', 'Data Analyst'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
