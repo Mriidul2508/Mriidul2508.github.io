@@ -53,10 +53,11 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 /*======================= typed js =======================*/
 const typed = new Typed('.multiple-text', {
-    /* REMOVED: Freelancer */
+  
     strings: ['Software Engineer', 'AI Specialist', 'Full Stack Developer', 'Data Analyst'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
     loop: true
 });
+
